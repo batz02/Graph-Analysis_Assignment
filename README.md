@@ -1,79 +1,70 @@
 
-# README
+## Description
 
-## Descrizione
+This project analyzes the flight network using graph analytics techniques in Python and Neo4j.  
+The main file is `GA_flight.ipynb`.
 
-Questo progetto analizza la rete dei voli usando tecniche di graph analytics in Python e Neo4j.  
-Il file principale è `GA_flight.ipynb`.
 
----
-
-## Requisiti
+## Requirements
 
 - Python 3
 - Jupyter Notebook
 - Neo4j Desktop
-- Pacchetti Python: `pandas`, `networkx`, `matplotlib`, `py2neo`, `neo4j`
+- Python packages: `pandas`, `networkx`, `matplotlib`, `py2neo`, `neo4j`
 
----
 
-## 1. Avvio Notebook
+## 1. Starting the Notebook
 
-1. Apri il terminale nella cartella del progetto.
-2. (Opzionale) Crea un ambiente virtuale:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate```    
+1. Open the terminal in the project folder
+2. (Optional) Create a virtual environment:
 
-3. Installa i pacchetti necessari:
+```
+python3 -m venv venv
+source venv/bin/activate
+```
 
-   ```bash
-   pip install pandas networkx matplotlib py2neo neo4j notebook```
-4. Avvia Jupyter:
+3. Install the required packages:
+```
+pip install pandas networkx matplotlib py2neo neo4j notebook
+```
 
-   ```bash
-   jupyter notebook
-   ```
-5. Apri il file `GA_flight.ipynb` dal browser.
+4. Start Jupyter:
+```
+jupyter notebook
+```
+5. Open the `GA_flight.ipynb` file from the browser
 
----
 
-## 2. Installazione e avvio Neo4j Desktop
+## 2. Installing and Starting Neo4j Desktop
 
-1. Scarica e installa [Neo4j Desktop](https://neo4j.com/download/).
-2. Crea un nuovo progetto e all’interno crea un nuovo database (puoi chiamarlo come preferisci).
-3. Avvia il database cliccando su “Start”.
-4. Installa il plugin **Graph Data Science** dal pannello “Plugins” (è sufficiente cliccare su “Install”).
-5. Prendi nota di:
+1. Download and install [Neo4j Desktop](https://neo4j.com/download/)
+2. Create a new project and inside it create a new database (you can name it as you like)
+3. Start the database by clicking "Start"
+4. Install the **Graph Data Science** plugin from the "Plugins" panel (just click "Install")
+5. Take note of:
 
-   * **Username** (di default `neo4j`)
-   * **Password** (ti viene chiesto di sceglierla al primo avvio)
-   * **Bolt URI** (di solito `bolt://localhost:7687`)
+* **Username** (default is `neo4j`)
+* **Password** (you will be asked to set it at the first start)
+* **Bolt URI** (usually `bolt://localhost:7687`)
 
----
 
-## 3. Configura il notebook
+## 3. Configure the notebook
 
-All’inizio del file `GA_flight.ipynb`, controlla che questi parametri siano corretti in base al tuo setup Neo4j:
-
-```python
+At the beginning of the `GA_flight.ipynb` file, check that these parameters are correct according to your Neo4j setup:
+```
 NEO4J_URI = "bolt://localhost:7687"
 NEO4J_USER = "neo4j"
 NEO4J_PASS = "password"
 ```
 
----
+## 4. Data
 
-## 4. Dati
+Make sure the data files (example: `airports.csv`, `routes.csv`) are in the **same folder** as the `GA_flight.ipynb` notebook.
 
-Assicurati che i file dei dati (esempio: `airports.csv`, `routes.csv`) siano nella **stessa cartella** del notebook `GA_flight.ipynb`.
 
----
+## 5. Execution
 
-## 5. Esecuzione
+Follow the cells in the `GA_flight.ipynb` notebook step by step.
 
-Segui le celle del notebook `GA_flight.ipynb` passo passo.
-
-* Le query Cypher per importare i dati e analizzarli sono già incluse nel notebook.
-* Prima di eseguire le parti che usano Neo4j, assicurati che il database sia avviato.
----
+* The Cypher queries to import and analyze data are already included in the notebook.
+* Before running parts that use Neo4j, make sure the database is running.
